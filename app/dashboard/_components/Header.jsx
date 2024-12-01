@@ -3,7 +3,7 @@ import { UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import React, { useEffect } from 'react'
-import logo from "components/ui/hyscaler-logo.svg"
+import logo from "./hyscaler-logo.svg"
 import Link from 'next/link'
 
 export const Header = () => {

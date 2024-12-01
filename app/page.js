@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from 'next/link';
 import Hero from "@/app/dashboard/_components/Hero";
 import Header from "@/app/dashboard/_components/MainHeader";
 import Services from "@/app/dashboard/_components/Services";
@@ -20,15 +18,6 @@ export default function Home() {
       <CaseStudies/>
       <Testimonials />
       <Contact />
-      {/* <Link>
-<Button>Go To DashBoard</Button>
-</Link> */}
-
-      {/* 
-      <CaseStudies />
-      
-      
-      <Footer /> */}
     </div>
        
     </div>
