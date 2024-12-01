@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Hero from "../components/ui/Hero";
 import Header from "../components/ui/Header";
 import Services from "../components/ui/Services";
-import Contact from "../components/ui/contact";
-import Testimonials from "../components/ui/testimonials";
+import Contact from "../components/ui/Contact";
+import Testimonials from "../components/ui/Testimonials";
 import CaseStudies from "../components/ui/CaseStudies";
 // import Footer from "@/components/ui/Footer";
 
