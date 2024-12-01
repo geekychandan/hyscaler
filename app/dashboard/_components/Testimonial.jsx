@@ -15,7 +15,7 @@ const testimonials = [
   },
 ];
 
-const Testimonials = () => {
+const Testimonial = () => {
   return (
     <section className="py-16 px-8 bg-white">
       <motion.h2
@@ -45,5 +45,5 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Testimonial;
 
