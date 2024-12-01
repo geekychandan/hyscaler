@@ -4,7 +4,6 @@ import { motion, useAnimation } from "framer-motion";
 import Typed from "typed.js";
 import ClientWrapper from "./ClientWrapper";
 import heroImage from "./hero-image.webp";
-import download from "./download.jpg";
 import Image from "next/image";
 
 const Hero = () => {

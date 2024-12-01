@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from 'next/link';
-import Hero from "@/components/ui/Hero";
-import Header from "@/components/ui/Header";
-import Services from "@/components/ui/Services";
-import Contact from "@/components/ui/contact";
-import Testimonials from "@/components/ui/Testimonials";
-import CaseStudies from "@/components/ui/caseStudies";
+import Hero from "@/app/dashboard/_components/Hero";
+import Header from "@/app/dashboard/_components/MainHeader";
+import Services from "@/app/dashboard/_components/Services";
+import Contact from "@/app/dashboard/_components/Contact";
+import Testimonials from "@/app/dashboard/_components/Testimonials";
+import CaseStudies from "@/app/dashboard/_components/CaseStudies";
 // import Footer from "@/components/ui/Footer";
 
 export default function Home() {
