@@ -39,14 +39,14 @@ const Hero = () => {
   return (
     <ClientWrapper>
       <motion.section
-        className="flex justify-between items-center min-h-screen px-8 py-16 bg-gray-900 text-white"
+        className="flex flex-col md:flex-row justify-between items-center min-h-screen px-8 py-16 bg-gray-900 text-white"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         {/* Text Content */}
         <motion.div
-          className="max-w-2xl"
+          className="max-w-2xl mb-8 md:mb-0"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -90,7 +90,7 @@ const Hero = () => {
 
         {/* Image with Animation */}
         <motion.div
-          className="max-w-md"
+          className="max-w-md hidden md:block"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.2, duration: 1 }}
