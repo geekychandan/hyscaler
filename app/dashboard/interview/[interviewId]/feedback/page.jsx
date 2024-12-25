@@ -34,7 +34,8 @@ const Feedback = ({ params }) => {
     // Calculate overall rating based on individual ratings
     if (result.length > 0) {
       const totalRating = result.reduce((sum, item) => sum + (item.rating || 0), 0); // Safely handle missing ratings
-      const averageRating = (totalRating / result.length).toFixed(1); // Rounded to 1 decimal place
+      const ratingCount = result.filter(item => item.rating !== null && item.rating !== undefined).length; // Count non-null ratings
+      const averageRating = (ratingCount > 0) ? (totalRating / ratingCount).toFixed(1) : null; // Calculate average if there are ratings
       setOverallRating(averageRating);
     } else {
       setOverallRating(null); // No ratings available
@@ -51,9 +52,9 @@ const Feedback = ({ params }) => {
         </h2>
       ) : (
         <>
-          <h2 className="text-primary text-lg my-2">
-            Your overall interview rating: <strong>{overallRating}/10</strong>
-          </h2>
+          {/* <h2 className="text-primary text-lg my-2">
+            Your overall interview rating: <strong>{overallRating ? `${overallRating}/10` : "N/A"}</strong>
+          </h2> */}
           <h2 className="text-sm text-gray-500">
             Find below interview questions with correct answers, your answer,
             and feedback for improvements for your next interview:
@@ -68,7 +69,7 @@ const Feedback = ({ params }) => {
                   <div className="flex flex-col gap-2">
                     <h2 className="text-red-500 p-2 border rounded-lg">
                       <strong>Rating: </strong>
-                      {item.rating}
+                      {item.rating || "N/A"}
                     </h2>
                     <h2 className="p-2 border rounded-lg bg-red-50 text-sm text-red-900">
                       <strong>Your Answer: </strong>
