@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Typed from "typed.js";
@@ -10,13 +10,13 @@ const Hero = () => {
   const controls = useAnimation();
   const typedRef = useRef(null);
 
-  // Typed.js effect
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["AI", "Cloud", "IoT", "Blockchain"],
-      typeSpeed: 50,
-      backSpeed: 50,
+      strings: ["through Creative Problem Solving", "with Machine Learning-Powered Insights","through the Power of Artificial Intelligence","with Cutting-Edge Technology"],
+      typeSpeed: 70, // Slower typing speed
+      backSpeed: 70, // Slower backspacing speed
       loop: true,
+      showCursor: true, // Hide the cursor
     });
 
     return () => {
@@ -24,7 +24,6 @@ const Hero = () => {
     };
   }, []);
 
-  // Animation control for image
   useEffect(() => {
     controls.start({
       y: [0, -10, 0],
@@ -55,10 +54,13 @@ const Hero = () => {
             <h1 className="text-5xl font-bold mb-4">
               Getting to the Future with
             </h1>
+            <div className=" flex flex-row text-2xl">
             <div
-              className="text-5xl font-bold text-teal-400"
+              className="text-1xl font-bold text-teal-400 mb-6 " // Change text size here and add bottom margin
               ref={typedRef}
-            ></div>
+              style={{ lineHeight: "1", minHeight: "1.2em" }} // Set min height to prevent shifting
+            ></div> 
+            </div> 
           </div>
 
           <motion.p
